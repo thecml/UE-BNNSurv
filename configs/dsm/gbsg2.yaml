@@ -1,0 +1,3 @@
+# Network
+network_layers: [32]
+n_iter: 5000

@@ -1,0 +1,6 @@
+# RSF
+n_estimators: 50
+max_depth: 7
+min_samples_split: 0.3
+min_samples_leaf: 0.1
+max_features: "sqrt"

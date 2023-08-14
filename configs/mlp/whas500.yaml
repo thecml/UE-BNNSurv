@@ -1,0 +1,18 @@
+# Network
+network_layers: [64, 64, 64]
+activiation_fn: "relu"
+dropout_rate: 0.25
+l2_reg: 0.001
+batch_size: 32
+
+optimizer:
+  class_name: Adam
+  config:
+    learning_rate: 0.05
+    decay: 0.001
+
+loss_fn:
+  class_name: CoxPHLoss
+  config:
+    reduction: 'auto'
+    name: None

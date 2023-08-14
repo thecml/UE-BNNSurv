@@ -1,0 +1,6 @@
+# RSF
+n_estimators: 200
+max_depth: 7
+min_samples_split: 0.1
+min_samples_leaf: 0.2
+max_features: "log2"

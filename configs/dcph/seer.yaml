@@ -1,0 +1,6 @@
+# Network
+network_layers: [64]
+batch_size: 128
+iters: 100
+learning_rate: 0.001
+optimizer: "RMSProp"

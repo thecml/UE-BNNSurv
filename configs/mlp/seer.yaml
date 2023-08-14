@@ -1,0 +1,19 @@
+# Network
+network_layers: [16]
+activiation_fn: "selu"
+dropout_rate: 0.25
+l2_reg: 0.01
+batch_size: 128
+
+optimizer:
+  class_name: SGD
+  config:
+    learning_rate: 0.005
+    momentum: 0.95
+    decay: 0.0001
+
+loss_fn:
+  class_name: CoxPHLoss
+  config:
+    reduction: 'auto'
+    name: None

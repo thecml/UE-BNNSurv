@@ -1,0 +1,18 @@
+# Network
+network_layers: [32, 32]
+activiation_fn: "selu"
+dropout_rate: 0.25
+l2_reg: 0
+batch_size: 128
+
+optimizer:
+  class_name: RMSprop
+  config:
+    learning_rate: 0.1
+    momentum: 0
+
+loss_fn:
+  class_name: CoxPHLoss
+  config:
+    reduction: 'auto'
+    name: None

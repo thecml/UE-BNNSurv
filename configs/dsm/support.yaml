@@ -1,0 +1,3 @@
+# Network
+network_layers: [16, 16]
+n_iter: 10000

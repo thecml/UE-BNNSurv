@@ -1,0 +1,6 @@
+# RSF
+n_estimators: 600
+max_depth: 3
+min_samples_split: 0.18
+min_samples_leaf: 0.1
+max_features: "auto"
