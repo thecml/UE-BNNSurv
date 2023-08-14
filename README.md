@@ -6,13 +6,13 @@ The proposed method is implemented based on the TensorFlow Probability package: 
 
 Full paper will be available soon on IEEE Xplore.
 
-<p align="center"><img src="https://github.com/thecml/UE-BNNSurv/img/BNN.png" width="95%" height="95%">
+<p align="left"><img src="https://github.com/thecml/UE-BNNSurv/blob/main/img/BNN.png" width="40%" height="40%">
 
 In this work we introduce the use of Bayesian inference techniques for survival analysis in neural networks that rely on the Cox’s proportional hazard assumption, for which we discuss a new flexible and effective architecture. We implement three architectures: a fully-deterministic neural network that acts as a baseline, a Bayesian model using variational inference and one using Monte-Carlo Dropout.
 
 Experiments show that the Bayesian models improve predictive performance over SOTA neural networks in a test dataset with few samples (WHAS500, 500 samples) and provide comparable performance in two larger ones (SEER and SUPPORT, 4024 and 8873 samples, respectively)
 
-<p align="center"><img src="https://github.com/thecml/UE-BNNSurv/img/seer_surv_all_models.png" width="40%" height="40%" /> <img src="https://github.com/thecml/UE-BNNSurv/img/seer_surv_grade_mcd.png" width="35%" height="35%" /> <img src="https://github.com/thecml/UE-BNNSurv/img/seer_surv_pdf.png" width="35%" height="35%" />
+<p align="center"><img src="https://github.com/thecml/UE-BNNSurv/blob/main/img/seer_surv_all_models.png" width="30%" height="30%" /> <img src="https://github.com/thecml/UE-BNNSurv/blob/main/img/seer_surv_grade_mcd.png" width="30%" height="30%" /> <img src="https://github.com/thecml/UE-BNNSurv/blob/main/img/seer_surv_pdf.png" width="31%" height="31%" />
 
 
 License
