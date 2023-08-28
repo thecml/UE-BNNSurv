@@ -4,7 +4,7 @@ This repository is the official TensorFlow implementation of "Uncertainty Estima
 
 The proposed method is implemented based on the TensorFlow Probability package: https://github.com/tensorflow/probability
 
-Full paper will be available soon on IEEE Xplore.
+<b>Full paper will be published on IEEE Xplore as part of BHI 2023 proceedings. ETA October 2023</b>
 
 <p align="left"><img src="https://github.com/thecml/UE-BNNSurv/blob/main/img/BNN.png" width="40%" height="40%">
 
