@@ -1,14 +1,14 @@
 # Uncertainty Estimation in Deep Bayesian Survival Models
 
-This repository is the official TensorFlow implementation of "Uncertainty Estimation in Deep Bayesian Survival Models", BHI 2023.
+This repository is the official TensorFlow implementation of "Uncertainty Estimation in Deep Bayesian Survival Models", [BHI 2023](https://bhi.embs.org/2023/).
 
-The proposed method is implemented based on the TensorFlow Probability package: https://github.com/tensorflow/probability
+The proposed method is implemented based on [TensorFlow Probability](https://github.com/tensorflow/probability).
 
 <b>Full paper will be published on IEEE Xplore as part of BHI 2023 proceedings. ETA October 2023</b>
 
 <p align="left"><img src="https://github.com/thecml/UE-BNNSurv/blob/main/img/BNN.png" width="40%" height="40%">
 
-In this work we introduce the use of Bayesian inference techniques for survival analysis in neural networks that rely on the Cox’s proportional hazard assumption, for which we discuss a new flexible and effective architecture. We implement three architectures: a fully-deterministic neural network that acts as a baseline, a Bayesian model using variational inference and one using Monte-Carlo Dropout.
+In this work, we introduce the use of Bayesian inference techniques for survival analysis in neural networks that rely on the Cox’s proportional hazard assumption, for which we discuss a new flexible and effective architecture. We implement three architectures: a fully-deterministic neural network that acts as a baseline, a Bayesian model using variational inference and one using Monte-Carlo Dropout.
 
 Experiments show that the Bayesian models improve predictive performance over SOTA neural networks in a test dataset with few samples (WHAS500, 500 samples) and provide comparable performance in two larger ones (SEER and SUPPORT, 4024 and 8873 samples, respectively)
 
