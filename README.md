@@ -1,6 +1,6 @@
 # Uncertainty Estimation in Deep Bayesian Survival Models
 
-This repository is the official TensorFlow implementation of "Uncertainty Estimation in Deep Bayesian Survival Models", [BHI 2023](https://bhi.embs.org/2023/).
+This repository is the official TensorFlow implementation of [Uncertainty Estimation in Deep Bayesian Survival Models](https://bhiconference.github.io/BHI2023/2023/pdfs/1570918354.pdf), BHI 2023.
 
 The proposed method is implemented based on [TensorFlow Probability](https://github.com/tensorflow/probability).
 
@@ -66,4 +66,12 @@ jupyter notebook plot_survival_time.ipynb
 
 Citation
 --------
-TBA
+```
+@inproceedings{lillelund_uncertainty_2023,
+  author     = {Christian Marius Lillelund and Martin Magris and Christian Fischer Pedersen},
+  title      = {Uncertainty Estimation in Deep Bayesian Survival Models},
+  booktitle  = {2023 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI) (IEEE BHI 2023)},
+  pages      = {18},
+  year       = {2023},
+}
+```
