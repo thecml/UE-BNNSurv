@@ -4,7 +4,6 @@ tensorflow==2.11.0
 tensorflow-probability==0.19.0
 scikit-survival==0.21.0
 scikit-learn==1.2.2
-auton-survival==0.0.5
 torch==1.13.1
 torchvision==0.14.1
 shap==0.41.0
