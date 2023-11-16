@@ -1,10 +1,12 @@
 # Uncertainty Estimation in Deep Bayesian Survival Models
 
-This repository is the official TensorFlow implementation of [Uncertainty Estimation in Deep Bayesian Survival Models](https://bhiconference.github.io/BHI2023/2023/pdfs/1570918354.pdf), BHI 2023.
+# *UPDATE 11/16/23: pip package now available. Use "pip install bnnsurv". Tested with TensorFlow 2.13 and TensorFlow Probability 0.21. See [test file](https://github.com/thecml/UE-BNNSurv/blob/main/tests/test_bnn_surv.py) for how to use.
+
+This repository is the official TensorFlow implementation of [Uncertainty Estimation in Deep Bayesian Survival Models](https://ieeexplore.ieee.org/document/10313466), BHI 2023.
 
 The proposed method is implemented based on [TensorFlow Probability](https://github.com/tensorflow/probability).
 
-<b>Full paper will be published on IEEE Xplore as part of BHI 2023 proceedings. ETA October 2023</b>
+<b>Full paper is available on IEEE Xplore: https://ieeexplore.ieee.org/document/10313466</b>
 
 <p align="left"><img src="https://github.com/thecml/UE-BNNSurv/blob/main/img/BNN.png" width="40%" height="40%">
 
@@ -68,10 +70,11 @@ Citation
 --------
 ```
 @inproceedings{lillelund_uncertainty_2023,
-  author     = {Christian Marius Lillelund and Martin Magris and Christian Fischer Pedersen},
-  title      = {Uncertainty Estimation in Deep Bayesian Survival Models},
-  booktitle  = {2023 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI) (IEEE BHI 2023)},
-  pages      = {18},
-  year       = {2023},
+  author={Lillelund, Christian Marius and Magris, Martin and Pedersen, Christian Fischer},
+  booktitle={2023 IEEE EMBS International Conference on Biomedical and Health Informatics (BHI)}, 
+  title={Uncertainty Estimation in Deep Bayesian Survival Models}, 
+  year={2023},
+  pages={1-4},
+  doi={10.1109/BHI58575.2023.10313466}
 }
 ```
