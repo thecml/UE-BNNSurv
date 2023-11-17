@@ -15,29 +15,72 @@ def convert_to_structured(T, E):
     concat = list(zip(E, T))
     return np.array(concat, dtype=default_dtypes)
 
-def test_bnn_surv():
-    # Load data
+def test_mlp():
     X, y = load_whas500()
     y = convert_to_structured(y['lenfol'], y['fstat'])
     
-    # Split data in train and test set
     X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.7, random_state=0)
 
-    # Scale data
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
-
-    # Make time/event split
+    
     t_train, e_train = make_time_event_split(y_train)
-
-    # Make model
-    model = models.MCD(layers=[32, 32])
     
-    # Train model
+    lower, upper = np.percentile(t_train[t_train.dtype.names], [10, 90])
+    event_times = np.arange(lower, upper+1)
+    
+    model = models.MLP(layers=[32, 32], num_epochs=1)
     model.fit(X_train, t_train, e_train)
+    preds_risk = model.predict_risk(X_test)
+    preds_surv = model.predict_survival(X_test, event_times)
+
+    assert len(preds_risk) != 0
+    assert len(preds_surv) != 0
+
+def test_vi():
+    X, y = load_whas500()
+    y = convert_to_structured(y['lenfol'], y['fstat'])
     
-    # Make predictions
-    preds = model.predict_risk(X_test)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.7, random_state=0)
+
+    scaler = StandardScaler()
+    X_train = scaler.fit_transform(X_train)
+    X_test = scaler.transform(X_test)
     
-    assert len(preds) != 0
+    t_train, e_train = make_time_event_split(y_train)
+    
+    lower, upper = np.percentile(t_train[t_train.dtype.names], [10, 90])
+    event_times = np.arange(lower, upper+1)
+    
+    model = models.VI(layers=[32, 32], num_epochs=1)
+    model.fit(X_train, t_train, e_train)
+    preds_risk = model.predict_risk(X_test)
+    preds_surv = model.predict_survival(X_test, event_times)
+
+    assert len(preds_risk) != 0
+    assert len(preds_surv) != 0
+
+def test_mcd():
+    X, y = load_whas500()
+    y = convert_to_structured(y['lenfol'], y['fstat'])
+    
+    X_train, X_test, y_train, y_test = train_test_split(X, y, train_size=0.7, random_state=0)
+
+    scaler = StandardScaler()
+    X_train = scaler.fit_transform(X_train)
+    X_test = scaler.transform(X_test)
+    
+    t_train, e_train = make_time_event_split(y_train)
+    
+    lower, upper = np.percentile(t_train[t_train.dtype.names], [10, 90])
+    event_times = np.arange(lower, upper+1)
+    
+    model = models.MCD(layers=[32, 32], num_epochs=1)
+    model.fit(X_train, t_train, e_train)
+    preds_risk = model.predict_risk(X_test)
+    preds_surv = model.predict_survival(X_test, event_times)
+
+    assert len(preds_risk) != 0
+    assert len(preds_surv) != 0
+

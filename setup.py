@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'bnnsurv', 
-    version = '0.1.1',
+    version = '0.1.3',
     description = 'TensorFlow 2.x Bayesian Neural Network for Survival Analysis',
     packages = find_packages(where="src"),
     package_dir={"": "src"},
@@ -32,6 +32,7 @@ setup(
     
     install_requires = [
         'numpy ~= 1.22',
+        'scikit-survival ~= 0.22',
         'tensorflow >= 2.11',
         'tensorflow-probability >= 0.19'
     ],
