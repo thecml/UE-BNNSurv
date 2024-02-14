@@ -8,6 +8,8 @@ The proposed method is implemented based on [TensorFlow Probability](https://git
 
 <b>Full paper is available on IEEE Xplore: https://ieeexplore.ieee.org/document/10313466</b>
 
+<b>Preprint: https://bhiconference.github.io/BHI2023/2023/pdfs/1570918354.pdf</b>
+
 <p align="left"><img src="https://github.com/thecml/UE-BNNSurv/blob/main/img/BNN.png" width="40%" height="40%">
 
 In this work, we introduce the use of Bayesian inference techniques for survival analysis in neural networks that rely on the Cox’s proportional hazard assumption, for which we discuss a new flexible and effective architecture. We implement three architectures: a fully-deterministic neural network that acts as a baseline, a Bayesian model using variational inference and one using Monte-Carlo Dropout.
